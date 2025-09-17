@@ -222,7 +222,7 @@ function animateThrow(from, to) {
       players[from].currentThrowImg = null;
       // 1. 최소-최대 고민 시간 설정 (단위: ms, 1000ms = 1초)
       const minThinkingTime = 800;  // 최소 0.5초
-      const maxThinkingTime = 2000; // 최대 2초
+      const maxThinkingTime = 1800; // 최대 2초
 
       // 2. 위 범위 내에서 랜덤한 시간 생성
       const randomThinkingTime = Math.random() * (maxThinkingTime - minThinkingTime) + minThinkingTime;
@@ -253,5 +253,6 @@ function drawPlayers() {
 function drawBall() {
   ctx.drawImage(ballImg, ball.x - ball.radius, ball.y - ball.radius, ball.radius*2, ball.radius*2);
 }
+
 
 
